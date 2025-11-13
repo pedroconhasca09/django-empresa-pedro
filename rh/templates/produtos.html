@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Produtos {% endblock %}
+
+{% block content %}
+    <h3>Página de Produtos</h3>
+    {% for produto in Produtos %}
+    <section class="card-produtos">
+       
+        <img src="{{ produto.foto.url }}" alt="Foto de {{produto.nome}}">
+        <div class="info-funcionario">
+            <h4>{{produto.nome}}</h4>
+            <p>Cargo: {{produto.cargo}} </p>
+            <p>Departamento: {{produto.departamento}} </p>
+            <p>Data de Contratação: {{produto.data_contratacao}}</p>
+            
+        </div>
+    </section>
+    {%endfor%}
+    
+{% endblock %}
