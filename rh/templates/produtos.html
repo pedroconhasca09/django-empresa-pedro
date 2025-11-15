@@ -3,15 +3,15 @@
 
 {% block content %}
     <h3>Página de Produtos</h3>
-    {% for produto in Produtos %}
+    {% for produto in produtos %}
     <section class="card-produtos">
        
         <img src="{{ produto.foto.url }}" alt="Foto de {{produto.nome}}">
         <div class="info-funcionario">
-            <h4>{{produto.nome}}</h4>
-            <p>Cargo: {{produto.cargo}} </p>
-            <p>Departamento: {{produto.departamento}} </p>
-            <p>Data de Contratação: {{produto.data_contratacao}}</p>
+            <h4>Nome: {{produto.nome}}</h4>
+            <p>Categoria: {{produto.categoria}} </p>
+            <p>Descrição: {{produto.descricao}} </p>
+            <p>Preço: {{produto.preco}}</p>
             
         </div>
     </section>

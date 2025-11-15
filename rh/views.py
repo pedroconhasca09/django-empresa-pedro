@@ -1,18 +1,27 @@
-from django.shortcuts import redirect, render
+from django.contrib import messages 
+from django.contrib.auth.models import User 
+from django.shortcuts import redirect, render 
 from .models import Funcionarios, Produto, Cliente
-from .forms import ContatoModelForm
+from django.contrib.auth.decorators import login_required 
+from django.contrib.auth import authenticate, login, logout 
+from .forms import ContatoModelForm , LoginForm , RegistroForm 
+
+from django.contrib.messages import constants as message_constants 
 # Create your views here.
+@login_required
 def home(request):
     return render(request,'home.html')
+@login_required
 def produtos(request):
     produto = Produto.objects.all()
     context= {"produtos": produto}
     return render(request,'produtos.html', context)
+@login_required
 def clientes(request):
     cliente = Cliente.objects.all()
     context= {"clientes": cliente}
     return render(request,'clientes.html', context)
-
+@login_required
 def funcionarios(request):
     funcionarios = Funcionarios.objects.filter(status=True)
     context = {

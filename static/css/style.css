@@ -36,7 +36,7 @@ main{
     min-height: 100vh;    
 }
 
-.card-funcionario {
+.card-funcionario, .card-produtos, .card-cliente {
     display:flex;
     width: 36rem;
     background-color: #fff;
