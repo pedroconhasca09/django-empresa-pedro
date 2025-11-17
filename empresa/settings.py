@@ -76,6 +76,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 # LOGOUT_REDIRECT_URL especifica a URL para redirecionar usuários após logout.
 LOGOUT_REDIRECT_URL= 'login'
+
 WSGI_APPLICATION = 'empresa.wsgi.application'
 
 

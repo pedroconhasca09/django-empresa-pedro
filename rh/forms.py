@@ -29,7 +29,7 @@ class ContatoModelForm(forms.ModelForm):
         }
 
 class LoginForm(forms.Form):
-    usarname = forms.CharField(label="Usuário")
+    username = forms.CharField(label="Usuário")
     password = forms.CharField(label="Senha", widget=forms.PasswordInput)
    
 class RegistroForm(forms.ModelForm):

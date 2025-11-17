@@ -5,7 +5,7 @@
     <section class="login-container"></section>
         <h1>Login</h1>
         <form class="login-form" method="post">
-            {% csrf_toke %}
+            {% csrf_token %}
             {{ form.as_p}}
             <button type="submit">Entrar</button>
         </form>

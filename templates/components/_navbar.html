@@ -6,8 +6,10 @@
         <a href="{% url 'clientes' %}">Clientes</a>
         <a href="{% url 'posts' %}">Posts</a>
         <a href="{% url 'contatos' %}">Contatos</a>
+        <a href="{% url 'logout' %}">Sair</a>
     {%else%}
-        <a href="{% url 'login''%}">Entrar</a>
-        <a href="{% url 'registrar''%}">Registrar</a>
+        <a href="{% url 'home' %}">Início</a>
+        <a href="{% url 'login' %}">Entrar</a>
+        <a href="{% url 'registrar' %}">Registrar</a>
     {% endif %}
 </nav>
